@@ -92,7 +92,6 @@ public class YamlEconomy implements Economy {
 	public List<PlayerBalance> getPlayers() {
 		List<PlayerBalance> playerData = new ArrayList<>();
 		File[] files = new File(EconomyMain.getPath() + "/data").listFiles();
-		System.out.println(files.length);
 		for (File file : files) {
 			playerData.add(getBalance(UUID.fromString(file.getName().replace(".yml", ""))));
 		}
